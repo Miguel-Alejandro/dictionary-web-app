@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "dictionary-web-app-55fbc": {
+      "hosting": {
+        "prod": [
+          "dictionary-web-app-55fbc"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "dictionary-web-app-55fbc"
+  }
+}

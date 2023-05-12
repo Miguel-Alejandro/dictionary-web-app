@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { BuilderPatternService } from '../builder_pettern/builder-pattern.service';
-import { environment } from '../../../enviroments/enviroment';
+import { environment } from '../../../environments/environment.development';
 import { Dictionary } from 'src/app/interfaces/dictionary';
 
 @Injectable({
