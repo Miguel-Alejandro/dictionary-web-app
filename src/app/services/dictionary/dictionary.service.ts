@@ -19,7 +19,7 @@ export class DictionaryService {
     return this.http
       .get(environment.apiUrl + word)
       .pipe(
-        map((request: any) => this.builder.builderDictionaryClass(request[0]))
+        map((response: any) => this.builder.builderDictionaryClass(response[0]))
       );
   }
 }

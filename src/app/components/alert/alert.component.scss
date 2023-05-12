@@ -1,0 +1,28 @@
+.alert {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.alert__message__title {
+  margin-bottom: 0;
+}
+.alert__message__message {
+  margin-top: 0;
+}
+
+.alert__close {
+  fa-icon {
+    cursor: pointer;
+  }
+}
+
+.alert-success {
+  background-color: var(--green-low);
+}
+
+.alert-error {
+  background-color: var(--red-low);
+}

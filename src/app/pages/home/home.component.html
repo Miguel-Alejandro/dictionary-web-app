@@ -1,3 +1,11 @@
+<div class="home-alert" *ngIf="responseError">
+  <app-alert
+    [error]="responseError"
+    [type]="responseType"
+    (close)="closeAlert($event)"
+  ></app-alert>
+</div>
+
 <div class="home">
   <app-search (search)="searchValue($event)"></app-search>
   <div class="search" *ngIf="searchResult">
