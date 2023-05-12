@@ -7,13 +7,15 @@ import { HomeComponent } from './pages/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AlertComponent } from './components/alert/alert.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    SearchComponent
+    SearchComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,

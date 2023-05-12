@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { lastValueFrom } from 'rxjs';
 import { Dictionary } from 'src/app/interfaces/dictionary';
+import { Error } from 'src/app/interfaces/error';
 import { DictionaryService } from 'src/app/services/dictionary/dictionary.service';
 import { IconsService } from 'src/app/services/icons/icons.service';
 
@@ -13,6 +14,8 @@ export class HomeComponent {
   public searchResult: Dictionary;
   public audio: HTMLAudioElement;
   public statusAudio: boolean = false;
+  public responseError: Error | undefined;
+  public responseType: 'success' | 'error';
 
   constructor(
     public dictionarySrv: DictionaryService,
@@ -40,10 +43,15 @@ export class HomeComponent {
     try {
       const searchServiceResult = await this.dictionarySrv.search($event);
       this.searchResult = await lastValueFrom(searchServiceResult);
-      console.log(this.searchResult);
-    } catch (error) {
-      console.error('Ha ocurrido un error,', error);
+      this.responseError = undefined;
+    } catch (error: any) {
+      this.responseError = error.error;
+      this.responseType = 'error';
     }
+  }
+
+  public closeAlert($event: boolean) {
+    if ($event) this.responseError = undefined;
   }
 
   private getAudioSrc(): Array<string> {
