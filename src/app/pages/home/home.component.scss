@@ -1,0 +1,107 @@
+.home {
+  padding: 20px 9rem;
+}
+
+.search__info__title{
+  h1{
+    margin-bottom: 0px;
+  }
+
+  h3{
+    margin-top: 10px;
+    color: var(--pink-medium);
+  }
+}
+
+.search__info__audio {
+  .play--button {
+    background-color: var(--pink);
+    color: #a646ea;
+  }
+}
+
+.search__info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.search__noun__title,
+.search__verb__title{
+  margin-top: 1rem;
+
+  display: flex;
+  align-items: center;
+
+  p{
+    margin-right: 10px;
+  }
+  
+  hr{
+    display: inline-block;
+    margin: 0;
+    width: 90%;
+    border-color: #ffffff4d;
+  }
+}
+
+.search__verb__title{
+  margin-top: 0px;
+}
+
+.search__noun__meanings,
+.search__verb__meanings{
+  p{
+    color: var(--gray-low);
+  }
+
+  ul{
+    color: var(--gray);
+  }
+}
+
+.search__noun__synonyms{
+  display: flex;
+  align-items:center;
+
+  p{
+    color: var(--gray-low);
+    margin-right: 10px;
+  }
+  strong{
+    color: var(--pink-medium);
+  }
+}
+
+.search__verb__meanings{
+  ul{
+    li{
+      margin-bottom: 10px;
+      p{
+        margin: 0px;
+      }
+
+      small{
+        color: var(--gray-low);
+      }
+    }
+  }
+}
+
+
+@media (max-width: 768px){
+  .home{
+    padding: 20px 3rem;
+  }
+  .search__noun__synonyms{
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 576px){
+  .home{
+    padding: 20px 1rem;
+  }
+}
+

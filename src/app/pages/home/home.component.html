@@ -1,0 +1,75 @@
+<div class="home">
+  <app-search (search)="searchValue($event)"></app-search>
+  <div class="search" *ngIf="searchResult">
+    <div class="search__info">
+      <div class="search__info__title">
+        <h1>{{ searchResult.word }}</h1>
+        <h3>{{ searchResult.phonetics[0].text ?? "not found" }}</h3>
+      </div>
+
+      <div class="search__info__audio">
+        <button
+          *ngIf="!statusAudio"
+          class="play--button 1"
+          (click)="playAudio()"
+        >
+          <fa-icon [icon]="iconSrv.icons.faPlay"></fa-icon>
+        </button>
+
+        <button *ngIf="statusAudio" class="play--button" (click)="stopAudio()">
+          <fa-icon [icon]="iconSrv.icons.faStop"></fa-icon>
+        </button>
+      </div>
+    </div>
+
+    <div class="search__noun">
+      <div class="search__noun__title">
+        <p>noun</p>
+        <hr />
+      </div>
+
+      <div class="search__noun__meanings">
+        <p>Meanings</p>
+        <ul>
+          <div *ngFor="let meanings of searchResult.meanings">
+            <div *ngIf="meanings.partOfSpeech === 'noun'">
+              <li *ngFor="let item of meanings.definitions">
+                <p>
+                  {{ item.definition }}
+                </p>
+              </li>
+            </div>
+          </div>
+        </ul>
+      </div>
+
+      <div class="search__noun__synonyms">
+        <p>Synonyms</p>
+        <div *ngFor="let synonym of searchResult.meanings">
+          <strong *ngFor="let item of synonym.synonyms">{{ item }}, </strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="search__verb">
+      <div class="search__verb__title">
+        <p>verb</p>
+        <hr />
+      </div>
+
+      <div class="search__verb__meanings">
+        <p>Meanings</p>
+        <ul>
+          <div *ngFor="let verb of searchResult.meanings">
+            <div *ngIf="verb.partOfSpeech == 'verb'">
+              <li *ngFor="let item of verb.definitions">
+                <p>{{ item.definition }}</p>
+                <small>{{ item.example }}</small>
+              </li>
+            </div>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
