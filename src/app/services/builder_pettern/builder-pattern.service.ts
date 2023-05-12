@@ -10,10 +10,10 @@ export class BuilderPatternService {
 
   constructor() { }
 
-  public builderDictionaryClass(request:any): Dictionary {
+  public builderDictionaryClass(response:any): Dictionary {
     return Builder(Dictionary)
-      .word(request.word)
-      .phonetics(request?.phonetics?.map((phonetics:any) =>
+      .word(response.word)
+      .phonetics(response?.phonetics?.map((phonetics:any) =>
           Builder(Phonetic)
             .audio(phonetics.audio)
             .sourceUrl(phonetics.sourceUrl)
@@ -22,7 +22,7 @@ export class BuilderPatternService {
             .build()
         ))
       
-      .meanings(request.meanings.map((meanings:any) =>
+      .meanings(response.meanings.map((meanings:any) =>
         Builder(Meaning)
           .antonyms(meanings.antonyms)
           .synonyms(meanings.synonyms)
@@ -39,11 +39,11 @@ export class BuilderPatternService {
       ))
       .license(
         Builder(License)
-          .name(request.license?.name)
-          .url(request.license?.url)
+          .name(response.license?.name)
+          .url(response.license?.url)
           .build()
       )
-      .sourceUrls(request.sourceUrls)
+      .sourceUrls(response.sourceUrls)
       .build();
   }
 
