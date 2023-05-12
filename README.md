@@ -1,27 +1,37 @@
-# DictionaryWebApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
+# Aplicación de diccionario
 
-## Development server
+Aplicación de diccionario que consume la api Free Dictionary API, busca palabras como en un diccionario tradicional, busca las palabras en inglés y obtén los resultados al instante.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Tech Stack
 
-## Code scaffolding
+**Client:** Angular
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+**Server:** Free Dictionary API
 
-## Build
+**deployed in:** Firebase hosting
+## Instalación local
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Para instalar de manera local este proyecto simplemente ejecuta el siguiente comando:
 
-## Running unit tests
+```bash
+  npm install
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Para levantar el servidor de desarrollo:
+```bash
+  ng serve
+```
 
-## Running end-to-end tests
+El comando anterior debió de levantar un servidor de desarrollo en el localhost:4200
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+![App Screenshot](./src/assets/documentation/doc-image.png)
 
-## Further help
+## Diagrama
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![App Screenshot](./src/assets/documentation/diagrama.png)
+
+## Demo
+
+Para ver una prueba en vivo visita [dictionary-demo](https://shields.io/)
+
