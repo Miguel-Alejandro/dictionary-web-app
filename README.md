@@ -22,8 +22,11 @@ Para levantar el servidor de desarrollo:
 ```bash
   ng serve
 ```
-
 El comando anterior debió de levantar un servidor de desarrollo en el localhost:4200
+
+## Demo
+
+Para ver una prueba en vivo visita [dictionary-demo](https://dictionary-web-app-55fbc.web.app/home)
 
 ![App Screenshot](./src/assets/documentation/doc-image.png)
 
@@ -31,7 +34,4 @@ El comando anterior debió de levantar un servidor de desarrollo en el localhost
 
 ![App Screenshot](./src/assets/documentation/diagrama.png)
 
-## Demo
-
-Para ver una prueba en vivo visita [dictionary-demo](https://shields.io/)
 
