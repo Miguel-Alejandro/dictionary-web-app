@@ -8,6 +8,7 @@ import { SearchComponent } from './components/search/search.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AlertComponent } from './components/alert/alert.component';
+import { HeaderComponent } from './components/header/header.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { AlertComponent } from './components/alert/alert.component';
     AppComponent,
     HomeComponent,
     SearchComponent,
-    AlertComponent
+    AlertComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

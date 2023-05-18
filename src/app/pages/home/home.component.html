@@ -7,6 +7,7 @@
 </div>
 
 <div class="home">
+  <app-header></app-header>
   <app-search (search)="searchValue($event)"></app-search>
   <div class="search" *ngIf="searchResult">
     <div class="search__info">
