@@ -1,4 +1,16 @@
 <div class="header">
+    <div class="header__mode-page">
+        <label for="theme" class="theme">
+            <span class="theme__toggle-wrap">
+                <input #modeButton (click)="changeMode($event)" id="theme" class="theme__toggle" type="checkbox" name="theme">
+                <span class="theme__icon">
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                </span>
+            </span>
+        </label>
+    </div>
+
     <div class="header__github">
         <a href="https://github.com/Miguel-Alejandro/dictionary-web-app" target="_blank">
             <fa-icon [icon]="iconSrv.icons.faGithub"></fa-icon>
