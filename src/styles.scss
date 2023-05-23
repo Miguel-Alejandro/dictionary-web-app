@@ -1,3 +1,9 @@
 @import './theme/fonts/fonts.scss';
 @import './theme/components/buttons.scss';
 @import './theme/colors/colors.scss';
+@import './theme/modes/dark.scss';
+
+* {
+    margin: 0px ;
+    padding: 0px ;
+}

@@ -1,0 +1,17 @@
+.dark--mode{
+    background-color: black;
+    
+    .header__github{
+        a{
+            fa-icon{
+                color: white !important;
+            }
+        }
+    }
+
+    .search__info__title{
+        h1{
+            color: white;
+        }
+    }
+}
